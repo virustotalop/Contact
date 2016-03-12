@@ -1,0 +1,35 @@
+Hi!
+
+i see you work on skQuery.
+
+Thanks for that!
+
+i found a Bug with SQL
+
+My Script:
+
+command /mobsave:
+	trigger:
+		set {_mobs::*} to result of query "SELECT COUNT(*) FROM `mob-save`"
+		send "%{_mobs::*}%" to the player
+#		set {_mobs::*} to result of query "SELECT COUNT(*) FROM `mob-save` WHERE `uuid`='%uuid of player%'"
+		loop {_mobs::*}:
+			send "%loop-value-1%" to the player
+			send "%loop-value-2%" to the player
+			send "%loop-value-3%" to the player
+			
+I have no errors on reload or console
+
+the command on minecraft give this back:
+
+com.sun.rowset.CachedRowSetImpl@300e353c
+com.sun.rowset.CachedRowSetImpl@300e353c
+-2
+-3
+
+SQL Query (direct on phpmyadmin or php) give back:
+62
+
+is this a bug from skQuery or from Skript?
+
+greetings and sorry for my very bad english.
